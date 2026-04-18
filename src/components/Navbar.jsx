@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     return (
         <nav className="navbar">
             <div className="nav-container">
@@ -11,7 +13,7 @@ const Navbar = () => {
                     </Link>
                 </div>
                 
-                <ul className="nav-menu">
+                <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
                     <li><Link to="/doctor">Find Doctors</Link></li>
                     <li><Link to="/find-doctor">Video Consult</Link></li>
                     <li><a href="#">Lab Tests</a></li>
@@ -41,7 +43,7 @@ const Navbar = () => {
                     <a href="#" className="login-btn">Login / Signup</a>
                 </div>
 
-                <div className="hamburger">
+                <div className={`hamburger ${isMenuOpen ? 'active' : ''}`} onClick={() => setIsMenuOpen(!isMenuOpen)}>
                     <span></span>
                     <span></span>
                     <span></span>
