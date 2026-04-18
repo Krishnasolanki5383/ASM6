@@ -1,0 +1,1351 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* Navigation */
+.navbar {
+    background: #fff;
+    padding: 0.5rem ;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    
+}
+
+.nav-menu a {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #2d3748;
+    transition: color 0.3s;
+    white-space: nowrap;
+}
+
+.nav-menu a:hover {
+    color: #3a65fd;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+   
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #2d3748;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: color 0.3s;
+    white-space: nowrap;
+}
+
+.dropdown-btn:hover {
+    color: #3a65fd;
+}
+
+.new-badge {
+    background: #3a65fd;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+    letter-spacing: 0.5px;
+}
+
+.arrow {
+    font-size: 0.7rem;
+    color: #718096;
+}
+
+.login-btn {
+    color: #2d3748;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    white-space: nowrap;
+    transition: color 0.3s;
+}
+
+.login-btn:hover {
+    color: #3a65fd;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #2d3748;
+    transition: all 0.3s;
+}
+
+/* Search Section */
+.search-section {
+    padding: 3rem 2rem;
+    background: #fff;
+    position: relative;
+ right: 15rem;
+}
+
+.search-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.search-box {
+    display: flex;
+    background: #fff;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.location-input,
+.search-input {
+    display: flex;
+    margin-left: 4rem;
+    gap: 0.75rem;
+    padding: .5rem ;
+    flex: 1;
+}
+
+.location-input {
+    max-width: 250px;
+}
+
+.icon {
+   
+        font-family: practicon;
+    font-style: normal;
+}
+
+.location-field,
+.search-field {
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+    color: #2d3748;
+    width: 100%;
+    font-family: inherit;
+}
+
+.location-field::placeholder,
+.search-field::placeholder {
+    color: #2d3748;
+}
+
+.search-divider {
+    width: 1px;
+    background: #e2e8f0;
+}
+
+/* Services Section */
+.services-section {
+    padding: 1rem 2rem;
+ 
+}
+
+.services-container {
+    max-width: 950px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-image {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.card-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.blue-bg {
+    background: linear-gradient(135deg, #a8c0ff 0%, #d4e4ff 100%);
+}
+
+.cyan-bg {
+    background: linear-gradient(135deg, #89d4cf 0%, #c4e8e5 100%);
+}
+
+.purple-bg {
+    background: linear-gradient(135deg, #c7b6eb 0%, #e4dbf5 100%);
+}
+
+.gray-bg {
+    background: linear-gradient(135deg, #b8bec5 0%, #d4d8dc 100%);
+}
+
+.card-content {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.card-content h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #718096;
+    line-height: 1.4;
+}
+
+/* Specialities Section */
+.specialities-section {
+    padding: 3rem 2rem;
+    background: #fff;
+}
+
+.specialities-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.section-header h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #718096;
+    line-height: 1.5;
+}
+
+.view-all-btn {
+    background: #fff;
+    color: #3a65fd;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #3a65fd;
+    border-radius: 6px;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.view-all-btn:hover {
+    background: #3a65fd;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 968px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .view-all-btn {
+        align-self: flex-start;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-container {
+        padding: 0 1rem;
+    }
+
+    .search-section {
+        padding: 2rem 1rem;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .location-input {
+        max-width: 100%;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .search-divider {
+        display: none;
+    }
+
+    .services-container {
+        gap: 1.5rem;
+    }
+
+    .card-image {
+        height: 180px;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card-image {
+        height: 220px;
+    }
+
+    .specialities-section {
+        padding: 2rem 1rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .section-header p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search-section {
+        padding: 1.5rem 1rem;
+    }
+
+    .location-field,
+    .search-field {
+        font-size: 0.9rem;
+    }
+
+    .services-section {
+        padding: 2rem 1rem;
+    }
+
+    .card-content {
+        padding: 1.25rem;
+    }
+
+    .card-content h3 {
+        font-size: 1.05rem;
+    }
+
+    .card-content p {
+        font-size: 0.85rem;
+    }
+}
+/* General Styles */
+body {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #222;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+a {
+    color: #16a1d6;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+
+/* Consult Section */
+.consult-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    
+    padding: 2rem 1rem 1.5rem 1rem;
+}
+
+.consult-item {
+    text-align: center;
+    max-width: 130px;
+    flex: 1 1 130px;
+    margin: 0.5rem 0;
+}
+
+.consult-item img {
+    width:9rem;
+    height: 9rem;
+    object-fit: contain;
+    background: none;
+    margin-bottom: 0.7rem;
+}
+
+.consult-item h3 {
+    font-size: 1rem;
+    margin: 0.3rem 0 0.1rem;
+    color: #222;
+    font-weight: 400;
+}
+
+.consult-item a {
+    font-size: 0.95rem;
+    color: #16a1d6;
+    transition: color 0.2s;
+}
+
+.consult-item a:hover {
+    color: #1c75d1;
+    text-decoration: underline;
+}
+
+/* Appointment Section */
+.appointment-section {
+    padding: 2rem 1rem 2rem 1rem;
+    background: #fff;
+}
+
+
+
+.specialities-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+   
+   
+    justify-content: center;
+}
+
+.speciality-card {
+    background: #f9fbfc;
+    height: 33rem;
+    width: 33rem;
+    border-radius: 12px;
+    max-width: 240px;
+    flex: 1 1 220px;
+    box-shadow: 0 2px 8px rgba(36,69,90,0.05);
+    padding: 1.2rem;
+    text-align: center;
+    transition: box-shadow 0.2s;
+}
+
+.speciality-card:hover {
+    box-shadow: 0 4px 16px rgba(36,69,90,0.12);
+}
+
+.speciality-card img {
+    width: 17rem;
+    height: 17rem;
+    object-fit: contain;
+    margin-bottom: 0.9rem;
+    border-radius: 8px;
+}
+
+.speciality-card h4 {
+    margin: 0.5rem 0 0.2rem;
+    font-size: 1.12rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.speciality-card p {
+    font-size: 0.98rem;
+    color: #666;
+    margin: 0.2rem 0 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .specialities-list {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .consult-section {
+        gap: 1rem;
+    }
+    .specialities-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .speciality-card {
+        max-width: 95vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .consult-section {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1rem 0.4rem;
+    }
+    .appointment-section {
+        padding: 1.2rem 0.4rem;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+}
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Health Articles Section */
+.health-articles {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.articles-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.articles-text {
+    padding-top: 20px;
+}
+
+.articles-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.articles-subtitle {
+    font-size: 16px;
+    color: #7f8c9a;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.see-all-btn {
+    display: inline-block;
+    background-color: #14bef0;
+    color: #fff;
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.see-all-btn:hover {
+    background-color: #0fa3d4;
+}
+
+/* Articles Grid */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.article-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.article-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #f0f4ff;
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.article-info {
+    padding: 20px;
+}
+
+.article-category {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    color: #14bef0;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.article-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.article-author {
+    font-size: 14px;
+    color: #7f8c9a;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.testimonials-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.testimonial-slider {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.slider-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.slider-btn:hover {
+    background-color: #e9ecef;
+}
+
+.slider-btn span {
+    font-size: 36px;
+    color: #7f8c9a;
+    font-weight: 300;
+}
+
+.testimonial-content {
+    text-align: center;
+    flex: 1;
+}
+
+.testimonial-text {
+    font-size: 22px;
+    color: #2c3e50;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.author-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f0f4ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.author-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.author-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+    .articles-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .articles-text {
+        text-align: center;
+    }
+
+    .articles-title {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .health-articles {
+        padding: 60px 0;
+    }
+
+    .articles-title {
+        font-size: 28px;
+    }
+
+    .articles-subtitle {
+        font-size: 15px;
+    }
+
+    .articles-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .testimonials {
+        padding: 60px 0;
+    }
+
+    .testimonials-title {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
+    .testimonial-slider {
+        gap: 20px;
+    }
+
+    .slider-btn {
+        width: 45px;
+        height: 45px;
+    }
+
+    .slider-btn span {
+        font-size: 32px;
+    }
+
+    .testimonial-text {
+        font-size: 18px;
+    }
+}
+
+/* Mobile Phones */
+@media screen and (max-width: 480px) {
+    .health-articles {
+        padding: 40px 0;
+    }
+
+    .articles-content {
+        gap: 30px;
+    }
+
+    .articles-title {
+        font-size: 24px;
+    }
+
+    .articles-subtitle {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .see-all-btn {
+        padding: 12px 28px;
+        font-size: 14px;
+    }
+
+    .article-image {
+        height: 180px;
+    }
+
+    .article-info {
+        padding: 15px;
+    }
+
+    .article-category {
+        font-size: 10px;
+    }
+
+    .article-title {
+        font-size: 15px;
+    }
+
+    .article-author {
+        font-size: 13px;
+    }
+
+    .testimonials {
+        padding: 40px 0;
+    }
+
+    .testimonials-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .testimonial-slider {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .slider-btn span {
+        font-size: 28px;
+    }
+
+    .prev-btn {
+        order: 2;
+    }
+
+    .testimonial-content {
+        order: 1;
+    }
+
+    .next-btn {
+        order: 3;
+    }
+
+    .testimonial-text {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .author-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .author-name {
+        font-size: 14px;
+    }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 360px) {
+    .articles-title {
+        font-size: 22px;
+    }
+
+    .testimonials-title {
+        font-size: 22px;
+    }
+
+    .testimonial-text {
+        font-size: 15px;
+    }
+}
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* App Download Section */
+.app-download {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.download-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.download-image {
+    display: flex;
+    justify-content: center;
+}
+
+.download-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.download-text {
+    padding-left: 20px;
+}
+
+.download-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.download-desc {
+    font-size: 16px;
+    color: #7f8c9a;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.download-form {
+    margin-bottom: 30px;
+}
+
+.form-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.phone-input-group {
+    display: flex;
+    gap: 0;
+    margin-bottom: 20px;
+}
+
+.country-code {
+    padding: 12px 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.phone-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-right: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.phone-input:focus {
+    border-color: #14bef0;
+}
+
+.send-sms-btn {
+    padding: 12px 30px;
+    background-color: #14bef0;
+    color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.send-sms-btn:hover {
+    background-color: #0fa3d4;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.app-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+.app-btn:hover {
+    transform: translateY(-2px);
+}
+
+.google-play {
+    background-color: #333;
+    color: #fff;
+}
+
+.play-icon {
+    font-size: 20px;
+}
+
+.app-store {
+    background-color: #333;
+    color: #fff;
+}
+
+.apple-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #1c3a70;
+    color: #fff;
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-heading {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #c7d2e3;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo {
+    margin-bottom: 15px;
+}
+
+.footer-logo img {
+    height: 40px;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #c7d2e3;
+}
+
+/* Responsive Design */
+
+/* Large Tablets */
+@media screen and (max-width: 1024px) {
+    .download-content {
+        gap: 50px;
+    }
+
+    .download-title {
+        font-size: 32px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+    .app-download {
+        padding: 60px 0;
+    }
+
+    .download-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .download-text {
+        padding-left: 0;
+    }
+
+    .download-title {
+        font-size: 28px;
+    }
+
+    .download-desc {
+        font-size: 15px;
+    }
+
+    .form-title {
+        font-size: 16px;
+    }
+
+    .app-buttons {
+        flex-wrap: wrap;
+    }
+
+    .footer {
+        padding: 50px 0 30px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+/* Mobile Phones */
+@media screen and (max-width: 480px) {
+    .app-download {
+        padding: 40px 0;
+    }
+
+    .download-title {
+        font-size: 24px;
+    }
+
+    .download-desc {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .form-title {
+        font-size: 15px;
+    }
+
+    .phone-input-group {
+        flex-direction: column;
+    }
+
+    .country-code {
+        border-right: 1px solid #ddd;
+        border-radius: 4px 4px 0 0;
+    }
+
+    .phone-input {
+        border-right: 1px solid #ddd;
+        border-radius: 0;
+    }
+
+    .send-sms-btn {
+        border-radius: 0 0 4px 4px;
+        padding: 14px 30px;
+    }
+
+    .app-buttons {
+        flex-direction: column;
+    }
+
+    .app-btn {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .footer {
+        padding: 40px 0 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-heading {
+        font-size: 15px;
+    }
+
+    .footer-links a {
+        font-size: 13px;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 360px) {
+    .download-title {
+        font-size: 22px;
+    }
+
+    .country-code,
+    .phone-input,
+    .send-sms-btn {
+        font-size: 14px;
+    }
+
+    .app-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
